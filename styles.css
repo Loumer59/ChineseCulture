@@ -1,0 +1,397 @@
+body {
+    margin: 0 auto;
+    background-image: linear-gradient(red, yellow, white);
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-width: 1200px;
+    font-family: Papyrus, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+.welcomer {
+    display: flex;
+    height: 54vh;
+    width: 16vw;
+    border: 2px ridge black;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 40%;
+    position: absolute;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: transform 1s ease-in-out 0ms;
+}
+
+.welcomer-head {
+    height: 40%;
+    width: 100%;
+    border: 2px ridge black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 40%;
+    z-index: 2;
+    background-color: white;
+
+}
+
+.arm-left {
+    position: absolute;
+    height: 6vh;
+    width: 12vw;
+    border: 2px ridge black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+    background-color: black;
+    right: 12vw;
+    top: 33%;
+    transform: rotate(130deg) scaleX(-1);
+    z-index: -1;
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;  
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(55.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(55.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+.arm-right {
+    position: absolute;
+    height: 6vh;
+    width: 12vw;
+    border: 2px ridge black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+    background-color: black;
+    right: -7vw;
+    top: 21vh;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.leg-left {
+   position: absolute;
+   height: 13vh;
+   width: 5vw;
+   border: 2px ridge black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 40%;
+    background-color: black;
+    top: 47vh;
+    right: 9vw;
+    z-index: -1;
+}
+
+
+.leg-right {
+    position: absolute;
+    height: 13vh;
+    width: 5vw;
+    border: 2px ridge black;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 40%;
+	border-bottom-left-radius: 40%;
+    background-color: black;
+    top: 47vh;
+    left: 9vw;
+    z-index: -1;
+}
+
+.left-eye {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px ridge black;
+    background-color: black;
+    height: 6vh;
+    width: 4vw;
+    top: 6vh;
+    left: 2vw;
+    z-index: 3;
+ }
+
+
+.right-eye {
+    position: absolute;
+   border-radius: 50%;
+   border: 2px ridge black;
+   background-color: black;
+   height: 6vh;
+   width: 4vw;
+   top: 6vh;
+   right: 2vw;
+   z-index: 3;
+}
+
+.left-ear {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px ridge black;
+    background-color: black;
+    height: 10vh;
+    width: 6vw;
+    top: -2vh;
+    left: 1px;
+    z-index: -1;
+}
+
+.right-ear {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px ridge black;
+    background-color: black;
+    height: 10vh;
+    width: 6vw;
+    top: -2vh;
+    right: 1px;
+    z-index: -1;
+}
+
+.upper-chest {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px ridge black;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: black;
+    height: 10vh;
+    width: 16vw;
+    top: 14vh;
+    z-index: 1;
+}
+
+.inner-left-eye {
+    position: absolute;
+    border-radius: 60%;
+    border: 2px ridge transparent;
+    background-color: white;
+    height: 2vh;
+    width: 1vw;
+    top: 8vh;
+    left: 4vw;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+
+.inner-right-eye {
+   position: absolute;
+   border-radius: 60%;
+   border: 2px ridge transparent;
+   background-color: white;
+   height: 2vh;
+   width: 1vw;
+   top: 8vh;
+   right: 4vw;
+   z-index: 4;
+   transform: rotate(-5deg);
+}
+
+.nose {
+   position: absolute;
+   z-index: 3;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+   border-top: 5px solid black;
+   border-bottom-right-radius: 50%;
+   border-bottom-left-radius: 50%;
+   background-color: black;
+   height: 2vh;
+   width: 1.5vw;
+   top: 12vh;
+}
+
+.mouth-left {
+   position: absolute;
+   top: 17vh;
+   width: 2vw;
+   border-color: black transparent transparent transparent;
+   transform: rotate(-150deg);
+   left: 6.2vw;
+   z-index: 4;
+   height: 1vh;
+   border: 1px solid #000;
+   background-color: black;
+}
+
+.mouth-right {
+   position: absolute;
+   top: 17vh;
+   width: 2vw;
+   border-color: black transparent transparent transparent;
+   background-color: black;
+   transform: rotate(150deg);
+   right: 6.2vw;
+   z-index: 4;
+   height: 1vh;
+   border: 1px solid #000;
+}
+
+.blush-left {
+    position: absolute;
+    border: 1px ridge transparent;
+    border-radius: 50%;
+    background-color: pink;
+    top: 12vh;
+    width: 4vw;
+    height: 5vh;
+    right: 10.5vw;
+    z-index: 2;
+}
+
+.blush-right {
+    position: absolute;
+    border: 1px ridge transparent;
+    border-radius: 50%;
+    background-color: pink;
+    top: 12vh;
+    width: 4vw;
+    height: 5vh;
+    left: 10.5vw;
+    z-index: 2;
+}
+
+.Welcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#Welcome1 {
+    position: absolute;
+    top: -80px;
+    animation: Welcome 0.5s ease-in-out 1s forwards; 
+}
+
+#Welcome2 {
+    position: absolute;
+    left: 1250px;
+    top: -80px;
+    animation: Welcome2 0.5s ease-in-out 1s forwards;
+ 
+}
+
+
+
+
+@keyframes Welcome {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.2);
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
+
+@keyframes Welcome2 {
+    0% {
+        top: -20px;
+        transform: skew(0deg, 5deg) scaleY(0);
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(10deg, 5deg) scaleY(1.2);
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(20deg,10deg) scaleY(1);
+    }
+}
+
+#contents {
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
+    font-size: 1.2em;
+}
+
+#button {
+    /* margin-left: 45%;
+    margin-right: 2rem;
+    margin-bottom: 5px;
+    padding: 7px;
+    padding-right: 11px;
+    padding-left: 11px; */
+    height: 4vh;
+    width: 4vw;
+    text-align: center;
+    background-color: red;
+    border: none;
+    margin-top: -5px;
+}
+
+#button1 {
+    /* margin-bottom: 5px;
+    padding: 8px;
+    padding-right: 11px;
+    padding-left: 11px; */
+    height: 4vh;
+    width: 4vw;
+    text-align: center;
+    background-color: yellow;
+    border: none;
+    margin-top: -5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap:10vw;
+
+}
+
+
+main {
+    min-height: 100vh;
+    
+}
+
+#button:active,
+#button:hover {
+    background-color: rgb(248, 64, 64);
+    cursor: pointer;
+}
+
+#button1:active,
+#button1:hover {
+    background-color: rgb(252, 252, 126);
+    cursor: pointer;
+}
+
+.welcomer:active {
+    transform: scale(1.5);
+    cursor: not-allowed;
+  }
